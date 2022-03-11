@@ -26,7 +26,7 @@ const Header = () => {
     setOpenDrawer(true);
   };
 
-  const toggleDrawer = (open) => (event) => {
+  const toggleDrawer = (open: any) => (event: any) => {
     if (
       event.type === "type" &&
       (event.key === "Tab" || event.key === "Shift")
@@ -65,7 +65,7 @@ const Header = () => {
         anchor={"right"}
         open={openDrawer}
         onClose={toggleDrawer(false)}
-        onOpen={toggleDrawer(true)}
+        // onOpen={(e: any) => toggleDrawer(true)}
       >
         <List style={{ padding: 20 }}>
           {["PROFILE"].map((text, index) => (

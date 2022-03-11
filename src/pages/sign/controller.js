@@ -16,6 +16,14 @@ const Controller = () => {
   });
 
   const infoUser = (key) => (e) => {
+    7;
+    e.preventDefault();
+    const { name, value } = e.target;
+
+    switch (key) {
+      case "firstName":
+        value.length < 2 ? console.log(22200) : console.log("opps");
+    }
     setValueInfoUser((prev) => ({
       ...prev,
       [key]: e.target.value,
@@ -25,9 +33,14 @@ const Controller = () => {
   const handleGetInfoUser = useCallback(infoUser, [valueInfoUser]);
 
   const handleSign = async () => {
-    api.post("users/signUp", {...valueInfoUser,verificationCode:+valueInfoUser.verificationCode}).then((response) => {
-      console.log(response);
-    });
+    api
+      .post("users/signUp", {
+        ...valueInfoUser,
+        verificationCode: +valueInfoUser.verificationCode,
+      })
+      .then((response) => {
+        console.log(response);
+      });
   };
 
   return (

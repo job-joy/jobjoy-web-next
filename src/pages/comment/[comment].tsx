@@ -94,13 +94,13 @@ const Comment = (props: any) => {
   );
 };
 
-export async function getStaticProps() {
-  const response = await axios.get("http://localhost:3001/posts");
-  return {
-    props: {
-      posts: response.data,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const response = await axios.get("http://localhost:3001/posts");
+//   return {
+//     props: {
+//       posts: response.data,
+//     },
+//   };
+// }
 
 export default Comment;

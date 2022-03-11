@@ -1,18 +1,10 @@
 import Layout from "../Component/layout";
 import React from "react";
-import "./styles.css";
+// import "./styles.css";
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default ({
-  Component,
-  pageProps,
-  ...appProps
-}: {
-  Component: any,
-  pageProps: any,
-  appProps: any,
-}) => {
-  const getContent = ():any => {
+export default ({ Component, pageProps, ...appProps }:any) => {
+  const getContent = (): any => {
     if ([`/login`].includes(appProps?.router.pathname))
       return <Component {...pageProps} />;
     if ([`/sign`].includes(appProps?.router.pathname))

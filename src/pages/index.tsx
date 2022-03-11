@@ -24,28 +24,13 @@ const Home = () => {
         </Typography>
         <div></div>
         <Button variant="outlined" style={{ margin: 5 }}>
-          <Link
-            href={"/verify"}
-            style={{ textDecoration: "none", color: "black", font: "icon" }}
-          >
-            Sign up
-          </Link>
+          <Link href={"/verify"}>Sign up</Link>
         </Button>
         <Button variant="outlined" style={{ margin: 5 }}>
-          <Link
-            href={"/login"}
-            style={{ textDecoration: "none", color: "black", font: "icon" }}
-          >
-            Login
-          </Link>
+          <Link href={"/login"}>Login</Link>
         </Button>
         <Button variant="outlined" style={{ margin: 5 }}>
-          <Link
-            href={"/posts"}
-            style={{ textDecoration: "none", color: "black", font: "icon" }}
-          >
-            Post
-          </Link>
+          <Link href={"/posts"}>Post</Link>
         </Button>
       </div>
     </>
