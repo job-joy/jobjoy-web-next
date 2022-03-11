@@ -21,7 +21,7 @@ const List = (props: any) => {
 
   return (
     <>
-      {props?.map((x: any) => (
+      {/* {props?.map((x: any) => (
         <Card sx={{ maxWidth: 345, margin: 5 }}>
           <CardMedia
             component="img"
@@ -56,28 +56,29 @@ const List = (props: any) => {
               <Chip label={x} style={{ margin: 5 }} />
             ))}
           </Stack> */}
-        </Card>
-      ))}
+      {/* </Card>
+      ))} */}
+      <div>d</div>
     </>
   );
 };
 
-export const getStaticProps = async () => {
-  const fetchPostList = async () => {
-    try {
-      const res = await api.get("feeds/getAllPosts");
-      console.log("res: ", res);
-      return res;
-    } catch (error) {
-      console.log("fetching initial post felid", error);
-    }
-  };
-  let res = await fetchPostList();
-  return {
-    props: {
-      post: res,
-    },
-  };
-};
+// export const getStaticProps = async () => {
+//   const fetchPostList = async () => {
+//     try {
+//       const res = await api.get("feeds/getAllPosts");
+//       console.log("res: ", res);
+//       return res;
+//     } catch (error) {
+//       console.log("fetching initial post felid", error);
+//     }
+//   };
+//   let res = await fetchPostList();
+//   return {
+//     props: {
+//       post: res,
+//     },
+//   };
+// };
 
 export default List;

@@ -8,7 +8,10 @@ import {
   InputLabel,
 } from "@mui/material";
 
-const Dynamic = ({ type, onChange, label }) => {
+const Dynamic = (props) => {
+  const { validation, type, onChange, label } = props;
+  console.log(props);
+
   return (
     <>
       <FormControl variant="standard" sx={{ m: 1, minWidth: 200 }}>
@@ -19,6 +22,7 @@ const Dynamic = ({ type, onChange, label }) => {
             variant="outlined"
             onChange={onChange}
             type={type}
+            error={validation[label]}
           />
         )}
 
@@ -28,6 +32,7 @@ const Dynamic = ({ type, onChange, label }) => {
             type={"number"}
             variant="outlined"
             onChange={onChange}
+            error={validation[label]}
           />
         )}
 
